@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <title>Uilisateurs</title>
+    <link rel="stylesheet" href="Utilisateur ecoride.css">
+</head>
+<body>
+    
+<h1> Espace Utilisateur </h1>
+  
+  
+  <div>
+    <hr>
+ <h2> <strong>   Vue détaillée </strong>  </h2>
+ <div> 
+<h3>  ° Avis du conducteur </h3>
+<h3> ° Modèle, marque,énergie du véhicule   </h3>
+<h3>  ° Préferences du conducteur   </h3>
+<p> <button> 3 places disponibles</button>    </p>
+
+ </div>
+  </div>
+
+  <div>
+   <p> <em>Ceci vous convient ? </em> </p> 
+    Participez <button type="button">
+        <img src="next.png" alt="Participez au covoiturage">
+          </button>
+          <div>
+          <p>  Effectuez une double confirmation  pour valider le crédit démandé    </p>
+          <form> 
+          <input type="text" placeholder="confirmé ou non" required >
+          <button class="confirm-credit">  Valider  </button>
+          </form>
+          </div>
+
+<p>  C'est votre première fois ? </p>
+    <h3> <small> Créez un compte et bénéficiez de 20 crédits  </small>  </h3>
+    <form id="creationCompte">   
+    <input type="text" placeholder="Pseudo" required>
+    <input type="text" placeholder="mail" required>
+    <input type="text"  placeholder="Mot de passe sécurisé" required>
+     <button>  créez un compte  </button>    
+    </form>
+</div>
+<div>
+    
+<div>  
+   <h2>   Saisir un voyage <button type="button"> <img src="down.png" alt="Accedez au page de covoiturage"> </button> </h2> 
+   <form id="saisiVoy"> 
+<h3> Adresse de départ:    </h3>
+<input type="text" placeholder="51 avenue de rang, Nanterre" required>
+<h3>  Adresse d'arrivée:  </h3>
+<input type="text" placeholder="10 rue de noix,Le Bourget" required>
+<h3>  Prix:   </h3>
+<input type="text" placeholder="10£" required>
+<hr> 
+<button> Valider   </button>
+</form>
+</div>
+</div>
+
+<div>
+<h2> Crédits restants:  </h2>
+<input type="text" placeholder="18" >
+    <h3> Choix du véhicule:  </h3>
+    <input type="text" placeholder="Dacia Spring,blanche" >
+</div>
+
+<div>
+    <img src="profile-user.png" alt="Photo de profil"  class="photo-utilisateur" >
+    <h2> Nom: </h2>
+
+    <h3>  Crédits:   </h3>
+    <h3> Prochain trajet:   </h3>
+    <h3>  Type d'utilisateur </h3>
+    <input type="text" placeholder="Passager Chauffeur">
+</div>
+
+<div>
+ <h2> Informations: </h2>
+ <h3>  ° Plaque d'immatriculation:  </h3>
+ <input type="type" placeholder="FR-445-MY">
+ <h3>   ° Date de première immatriculation:  </h3>
+ <input type="type" placeholder="11-10-2019">
+ <h3>  °  Modèle, couleur, & marque de voiture: </h3>
+ <input type="type" placeholder="Toyota Corolla Bleu">
+ <h3>   ° Nombre de voitures:    </h3>
+ <input type="type" placeholder="2">
+ <h3>   ° Places restantes: </h3>
+ <input type="type" placeholder="2">
+ <h3>   °  Préferences  </h3>
+ <input type="type" placeholder="non fumeurs, sans animal">
+<h3>    ° Autres Préferences:   </h3>
+<input type="type" placeholder="">
+<hr>
+<button class="passager-cond">  Entrer  </button>
+</div>
+
+<div> 
+   <h2>  Historique des covoiturages     </h2> 
+
+
+ <h3>  Visionner mon historique </h3>  
+
+
+    <h2> Annuler mes covoiturages </h2>
+    <h3>  ° Mise a jour de crédits:  </h3>
+    <input type="type" placeholder="20">
+    <h3>  ° Mise a jour des places:   </h3>
+    <input type="type" placeholder="4">
+</div>
+    <div>    
+        <h2> Envoyer un mail aux participants:  </h2>
+        <form id="envoiMail"> 
+        <input type="type" placeholder=" lumina@yahoo.com" required >
+        <input type="type" placeholder="andrelies@gmail.com" required >
+        <button> Envoyer   </button>
+        </form>
+    </div>
+</div>
+
+<div> 
+    <h2> Chauffeur </h2>
+    <div>
+        <h3> <button id="demarrageTrajet"> Démarrer le trajet </button>    </h3>
+        <h3>  <button id="finTrajet">  Arreter le trajet    </button>    </h3>
+    </div>
+    <div>
+        <p>   <button class="conf-pass"> confirmer </button>  Envoi de mail aux participants  </p>
+    
+        <h2> Crédits du chauffeur mise à jour: </h2> <input type="type" placeholder="20">
+    </div>
+</div>
+
+<div>
+    <h2> Passagers </h2>
+    <h3>   <button class="fin-trajet">  Validez le trajet  </button> </h3>
+    <div>
+        <h3> ° Soumettre un avis: </h3>
+        <input type="type" placeholder="">
+              <h3> ° Mettre une note: </h3>
+              <input type="type" placeholder="">
+              <hr>
+             <button class="avis-note"> Entrer   </button>
+              <p>  Veuillez attendre la validation   </p>
+         </div>
+</div>
+<div>  <h4>  Vous souhaitez signaler un problème ?  </h4> 
+<input type="text" placeholder="">
+
+<button class="probleme-cov" > Valider   </button>
+</div>
+
+
+<footer>
+    <hr>
+<div>
+    <p> Employé ? <a href="espace employé.html"> <button> Connectez-vous </button> </a> </p>
+</div>
+  <a href="espace covoiturage.html">     <button> retour sur la page de covoiturage  </button> </a>
+</footer>
+
+
+<script>
+    
+    function creditUt() {
+    alert ("Quelques points seront déduit !");
+  }
+ let creditsUtl=document.querySelector(".confirm-credit");
+ creditsUtl.addEventListener("click",creditUt)
+
+
+
+
+ document.addEventListener("DOMContentLoaded", function () { 
+        let form = document.getElementById("creationCompte"); 
+        console.log("Script loaded!"); 
+        if (form) { console.log("Form found!"); 
+        form.addEventListener("submit", function (event) { console.log("Submit event triggered!"); 
+        if (!form.checkValidity()) { 
+            event.preventDefault(); 
+            console.log("Form is invalid, preventing submission."); 
+            alert("Veuillez remplir tous les champs obligatoires."); 
+        } 
+        else { event.preventDefault(); 
+            console.log("Form is valid, showing alert."); 
+            alert("Votre compte est crée"); 
+        } 
+    }); 
+} 
+else { 
+    console.error("Form not found! Check the form ID."); 
+} 
+});
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () { 
+        let form = document.getElementById("saisiVoy"); 
+        console.log("Script loaded!"); 
+        if (form) { console.log("Form found!"); 
+        form.addEventListener("submit", function (event) { console.log("Submit event triggered!"); 
+        if (!form.checkValidity()) { 
+            event.preventDefault(); 
+            console.log("Form is invalid, preventing submission."); 
+            alert("Veuillez remplir tous les champs obligatoires."); 
+        } 
+        else { event.preventDefault(); 
+            console.log("Form is valid, showing alert."); 
+            alert("Saisi de voyage prit en compte"); 
+        } 
+    }); 
+} 
+else { 
+    console.error("Form not found! Check the form ID."); 
+} 
+});
+
+
+function passagerUt() {
+    alert ("Informations enregistrés!");
+  }
+ let passagerUtl=document.querySelector(".passager-cond");
+ passagerUtl.addEventListener("click",passagerUt)
+
+
+
+
+
+ document.addEventListener("DOMContentLoaded", function () { 
+        let form = document.getElementById("envoiMail"); 
+        console.log("Script loaded!"); 
+        if (form) { console.log("Form found!"); 
+        form.addEventListener("submit", function (event) { console.log("Submit event triggered!"); 
+        if (!form.checkValidity()) { 
+            event.preventDefault(); 
+            console.log("Form is invalid, preventing submission."); 
+            alert("Veuillez remplir tous les champs obligatoires."); 
+        } 
+        else { event.preventDefault(); 
+            console.log("Form is valid, showing alert."); 
+            alert("Mail envoyé aux participants"); 
+        } 
+    }); 
+} 
+else { 
+    console.error("Form not found! Check the form ID."); 
+} 
+});
+
+
+
+
+document.getElementById("demarrageTrajet").addEventListener("click", function() {
+    
+    this.style.display = "none";
+    
+    
+    document.getElementById("finTrajet").style.display = "block";
+  });
+
+  document.getElementById("finTrajet").addEventListener("click", function() {
+    
+    this.style.display = "none";
+    
+    
+    document.getElementById("demarrageTrajet").style.display = "block";
+});
+
+
+
+
+  function passagerCo() {
+    alert ("Confirmation d'envoi!");
+  }
+ let passagerConf=document.querySelector(".conf-pass");
+ passagerConf.addEventListener("click",passagerCo)
+
+
+
+
+ function trajetCo() {
+    alert ("Trajet terminé!");
+  }
+ let finaleConf=document.querySelector(".fin-trajet");
+ finaleConf.addEventListener("click",trajetCo)
+
+
+
+
+
+ function problemeCo() {
+    alert ("Nous allons résoudre votre problème !");
+  }
+ let soluCov=document.querySelector(".probleme-cov");
+ soluCov.addEventListener("click",problemeCo)
+
+
+
+
+ function noteCo() {
+    alert ("Votre avis sera transmit !");
+  }
+ let validAv=document.querySelector(".avis-note");
+ validAv.addEventListener("click",noteCo)
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
