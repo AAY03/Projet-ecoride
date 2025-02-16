@@ -1,0 +1,172 @@
+
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  text-align: center; 
+  background-color: #bfd9ce; 
+} 
+nav { 
+   color: black;
+  padding: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+} 
+.search-cointainer { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px;
+   padding: 10px; 
+  } 
+.search-input { 
+  padding: 8px; 
+  width: 300px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+} 
+.recherche-valider {
+  padding: 5px;
+  cursor: pointer;
+  
+}
+
+
+.menu-accueil { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 10px; 
+  padding: 10px 0; 
+} 
+.menu-accueil button { 
+  background-color: black; 
+  padding: 10px 15px; 
+  border: none; 
+  color: white; max-width: 100%; 
+  height: auto; 
+  margin: 10px 0; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 14px; 
+} 
+.menu-accueil button:hover { 
+  background-color: #0056b3; 
+} 
+.logo-voiture { 
+  width: 50px; 
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 10px;
+ } 
+ .first-image {
+  max-width: 30%; 
+  height: auto; 
+  margin: 100px 0;
+  padding: 20px;
+
+ }
+ .second-image {
+  max-width: 40%; 
+  height:auto;
+  margin: 20px 0; 
+  padding: 20px;
+ }
+.third-image {
+  max-width: 30%; 
+  height: auto; 
+  margin: 100px 0; 
+  padding: 20px;
+}
+p { 
+  font-size: 18px; 
+  color: #333; 
+  padding: 10px; 
+} 
+footer { 
+  color: white; 
+  padding: 10px 0; 
+} 
+.mail-ecoride { 
+  font-size: 16px; 
+} 
+  .mention-ecoride  { 
+    color: blue; 
+    text-decoration: none; 
+    position: left;
+    text-decoration: underline;
+  } 
+@media (max-width: 768px) { 
+  .search-input { 
+    width: 150px; 
+  } 
+  .menu-accueil { 
+    flex-direction: column; 
+    gap: 5px; 
+  } 
+.menu-accueil button { 
+  width: 80%; 
+} 
+} 
+@media (max-width: 500px) { 
+  .search-input { 
+    width: 120px; 
+  } 
+  p { font-size: 16px; } 
+}
+
+@media screen and (max-width: 768px) { 
+  #admin-register { 
+    display: none !important;  
+  } 
+}
+
+@media screen and (min-width: 769px) { 
+  #admin-register { 
+    display: block !important;  
+    visibility: visible !important;
+    opacity: 1 !important;
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
