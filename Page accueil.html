@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <title>Accueil Ecoride</title>
+    <link rel="stylesheet" href="Accueil ecoride.css">
+
+    
+</head>
+<body>
+<header>
+    <nav>
+<div class="search-cointainer">
+    
+<input type="text" class="search-input" placeholder="Rechercher un itinéraire..." >  
+<button class="recherche-valider">  Valider  </button>
+
+    
+</div>
+<div class="menu-accueil">
+    <hr>
+<a href="Page accueil.html">  <button> Accueil   </button> </a>
+  <a href="espace covoiturage.html" > <button class="site-covoiturage"> Covoiturages   </button> </a>
+<a href="espace utilisateur.html"> <button class="site-utilisateur"> Connexion  </button> </a>
+  <a href="#mail">    <button class="mail-ecoride"> Contact </button> </a>
+<img src="car logo.png" class="logo-voiture"         alt="Logo de Ecoride">
+<hr>
+</div>
+
+<img src="image ecoride.PNG" alt="Photo de représentation 1" class="first-image">
+<img src="ecoride plug.png" alt="Photo de représentation 2" class="second-image">
+<img src="ecorideimg1.JPG" alt="Photo de représentation 3" class="third-image">
+
+<div>     
+    <p>  Ecoride est la solution pour tous, que vous soyez engagés ou pas, Ecoride améliorera votre quotidien. </p>
+    <p>  Soyons unis face aux défis de l’environnement !! </p>
+</div>
+
+
+
+</nav>
+</header>
+
+    
+
+<footer>
+<hr>
+<div> 
+    <p id="mail" class="mail-ecoride"> ecoforlife@gmail.com </p>  </div>
+<div>
+<a href="tp examen studi.pdf" class="mention-ecoride" target="_blank" >© 2025 Ecoride-Tous droits réservés </a>
+</div>
+<hr>
+
+</footer>
+<footer> 
+  <div id="admin-register"> 
+    <h2>Créer un compte administrateur </h2> 
+    <form id="adminForm"> 
+      <label for="adminUsername"> Nom d'utilisateur : </label> 
+      <input type="text" id="adminUsername" name="adminUsername" required> 
+      <label for="adminEmail"> Email :</label> 
+      <input type="email" id="adminEmail" name="adminEmail" required> 
+      <label for="adminPassword"> Mot de passe :</label> 
+      <input type="password" id="adminPassword" name="adminPassword" required> 
+      <button type="submit">Créer un compte</button> 
+      </form>
+    
+  </div>
+
+
+
+</footer>
+
+
+<script>
+  
+  function siteCo() {
+    alert ("Bienvenue sur la page de covoiturage");
+  }
+ let siteCov=document.querySelector(".site-covoiturage");
+ siteCov.addEventListener("click",siteCo)
+
+
+  
+ function siteUt() {
+    alert ("Bienvenue sur la page d'utilisateur");
+  }
+ let siteUtl=document.querySelector(".site-utilisateur");
+ siteUtl.addEventListener("click",siteUt)
+ 
+
+ function pageAcc() {
+    alert ("Envoyez un mail");
+  }
+ let siteEco=document.querySelector(".mail-ecoride");
+ siteEco.addEventListener("click",pageAcc)
+
+
+ function itinéraireCov() {
+    alert ("Veuillez aller sur la page de covoiturages");
+  }
+ let sitedeCov=document.querySelector(".recherche-valider");
+ sitedeCov.addEventListener("click",itinéraireCov)
+
+
+
+
+
+
+
+
+
+
+
+
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const adminForm = document.getElementById("adminForm");
+
+    adminForm.addEventListener("submit", function (event) {
+        event.preventDefault(); 
+
+        
+        const username = document.getElementById("adminUsername").value.trim();
+        const email = document.getElementById("adminEmail").value.trim();
+        const password = document.getElementById("adminPassword").value.trim();
+
+        
+        const validAdmins = [
+            { username: "admin1", email: "admin1@example.com", password: "passs123" },
+            { username: "admin2", email: "admin2@example.com", password: "secure356" },
+            { username: "admin3", email: "admin3@example.com", password: "private736" },
+            { username: "superadmin", email: "superadmin@example.com", password: "topsecret1" }
+        ];
+
+        
+        const isAdmin = validAdmins.some(admin =>
+            admin.username === username && admin.email === email && admin.password === password
+        );
+
+        if (isAdmin) {
+            alert("Connexion réussie ! Vous serai redirigé vers la page administrateur...");
+            window.location.href = "espace administrateur.html"; 
+        } else {
+            alert("Informations incorrectes. Veuillez réessayer ou vous n'êtes pas administrateur.");
+        }
+    });
+});
+
+
+ 
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
