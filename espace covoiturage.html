@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <title>Covoiturages</title>
+    <link rel="stylesheet" href="Covoiturage ecoride.css">
+</head>
+
+<body>
+    
+    
+<h1> Espace de Covoiturages </h1>
+     
+    <div class="laForm" >
+        <hr>
+     <h2> Formulaire de Covoiturages      </h2>
+     <div > 
+        <form id="formCovoiturage">
+            <label for="departAdress"> Adresse de départ: </label>
+            <input type="text" id="departAdress" name="departAdress" required>
+            
+    
+            <label for="departArrivée"> Adresse d'arrivée: </label>
+            <input type="text" id="departArrivée" name="departArrivée" required>
+            
+
+            <label for="dateTrajet"> Date du trajet: </label>
+            <input type="text" id="dateTrajet" name="dateTrajet" required>
+
+        
+     
+      <button type="submit" > Valider</button>
+        </form>
+     </div>
+    </div>
+     
+          
+        </div >
+     <h2>   <img src="icon filtres.png" alt icon de filtres>  Filtres:    </h2>
+     <form id="filtresCov">  
+     <h3>  Aspect écologique:         </h3>
+     <input type="text" placeholder="voiture électrique ou hybride" required>
+     <h3>   Prix du voyage:    </h3>
+     <input type="text" placeholder="15£" required>
+     <p> <em> prix minimum:  </em>  </p>
+     <input type="text" placeholder="10£" required>
+     <h3>  Durée du voyage: </h3>
+     <input type="text" placeholder="1h30" required>
+     <p> <em>  Démandez la durée minimum   <button class="demandeMin"> Démandez au conducteur </button>    </em>     </p>
+     <h3>  Choix spécifique:  </h3>
+     <p>  <em>   Visualisez uniquement les chauffeurs avec une note minimum de:       </em>       </p>
+     <input type="text" placeholder="4/5" required>
+     <hr>
+     <button class="confirmVo">  Entrer </button>  
+     </form>
+     </div>
+      </div>
+
+      <img src="pexels-cottonbro-4606345.jpg" alt="Image d'un covoiturage">
+
+      <div>
+        <hr>
+        <img src="man.png" alt="Photo de profil" class="photo-conducteur">   
+        <h2>Pseudo </h2>
+        <form id="choixFinale"> 
+        
+       <h2> Note:    </h2>
+       <input type="text" placeholder="4/5" required>
+       <h3> Places restantes:    </h3>
+
+       <h3>  Prix: </h3>
+       <input type="text" placeholder="15£" required>
+       <h3>  Date:  </h3>
+       <input type="text" placeholder="10 février 2025" required>
+       <h3>  Heure de départ:     </h3>
+       <input type="text" placeholder="15h30" required>
+       <h3>   Heure d'arrivée:      </h3>
+       <input type="text" placeholder="16h25" required>
+       <h3>  Type de voyage:  </h3>
+       <input type="text" placeholder="écologique" required>
+       <div> 
+       <button type="submit">  détail  </button>
+       </form>
+       </div>
+   </div>
+    
+   
+   <img src="pexels-kindelmedia-9800006.jpg" alt="Recharge d'une voiture électrique">
+
+
+
+
+<script>
+    
+   
+    
+ 
+    document.addEventListener("DOMContentLoaded", function () { 
+        let form = document.getElementById("formCovoiturage"); 
+        console.log("Script loaded!"); 
+        if (form) { console.log("Form found!"); 
+        form.addEventListener("submit", function (event) { console.log("Submit event triggered!"); 
+        if (!form.checkValidity()) { 
+            event.preventDefault(); 
+            console.log("Formulaire est invalid."); 
+            alert("Veuillez remplir tous les champs obligatoires."); 
+        } 
+        else { event.preventDefault(); 
+            console.log("Form is valid, showing alert."); 
+            alert("Choix prit en compte !"); 
+        } 
+    }); 
+} 
+else { 
+    console.error("Form not found! Check the form ID."); 
+} 
+});
+
+
+
+
+
+
+
+function demandeCon() {
+    alert ("Demande envoyé au conducteur");
+  }
+ let demandeEco=document.querySelector(".demandeMin");
+ demandeEco.addEventListener("click",demandeCon)
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () { 
+        let form = document.getElementById("filtresCov"); 
+        console.log("Script loaded!"); 
+        if (form) { console.log("Form found!"); 
+        form.addEventListener("submit", function (event) { console.log("Submit event triggered!"); 
+        if (!form.checkValidity()) { 
+            event.preventDefault(); 
+            console.log("Form is invalid, preventing submission."); 
+            alert("Veuillez remplir tous les champs obligatoires."); 
+        } 
+        else { event.preventDefault(); 
+            console.log("Form is valid, showing alert."); 
+            alert("Filtres prit en compte !"); 
+        } 
+    }); 
+} 
+else { 
+    console.error("Form not found! Check the form ID."); 
+} 
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () { 
+        let form = document.getElementById("choixFinale"); 
+        console.log("Script loaded!"); 
+        if (form) { console.log("Form found!"); 
+        form.addEventListener("submit", function (event) { console.log("Submit event triggered!"); 
+        if (!form.checkValidity()) { 
+            event.preventDefault(); 
+            console.log("Form is invalid, preventing submission."); 
+            alert("Veuillez remplir tous les champs obligatoires."); 
+        } 
+        else { event.preventDefault(); 
+            console.log("Form is valid, showing alert."); 
+            alert("Choix finale prit en compte !"); 
+        } 
+    }); 
+} 
+else { 
+    console.error("Form not found! Check the form ID."); 
+} 
+});
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html> 
