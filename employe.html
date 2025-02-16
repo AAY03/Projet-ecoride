@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <title>Employés</title>
+    <link rel="stylesheet" href="Employé ecoride.css">
+</head>
+<body>
+    
+<h1> Espace Employé </h1>
+
+
+<div>
+  <h2 class="cloche-notif"> <img src="bell.png" alt="Cloche de notification" > 5 avis déposés </h2>
+</div>
+<div>
+    <h2>  Employé   </h2>
+    <img src="woman.png" alt="Photo de profil employé">
+
+
+    <input type="text" placeholder=" Carine Farine" id="nomEmploye" readonly >
+    <input type="text" placeholder=" Chargé de clientèle" id="fonctionEmploye" readonly >
+    <input type="text" placeholder="carinefr@gmail.com"  id="emailEmploye" readonly >
+    <button>   Entrer  </button>
+</div>
+
+<div>
+    <h2> Avis des participants  </h2>
+    <div>
+        <h3> ° Camille Andy: 
+            <input type="text" placeholder="">
+            <button>  Valider    </button>  <button >  Refuser   </button>     </h3>
+
+        </div>
+        <div>
+        <h3>  ° André Compte: 
+            <input type="text" placeholder="">
+             <button>  Valider    </button>  <button>  Refuser   </button>  </h3>
+        </div>
+        <div>
+        <h3>   ° Lorelai Gilmore: 
+            <input type="text" placeholder="">
+            <button>  Valider    </button>  <button>  Refuser   </button> </h3>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h2> Covoiturages ayant des probèmes </h2>
+    <div>
+        <h3>  ° Numéo du covoiturage:  </h3>
+        <input type="text" placeholder="">
+        <h3>  ° Pseudo du chauffeur: </h3>
+        <input type="text" placeholder="">
+        <h3>   ° Mail du chauffeur:  </h3>
+        <input type="text" placeholder="">
+        <h3>  ° Pseudo du participant </h3>
+        <input type="text" placeholder="">
+        <h3>  °  Mail du participant    </h3>
+        <input type="text" placeholder="">
+        <h3> ° Date d'arrivée et de départ  </h3>
+        <input type="text" placeholder="">
+        <h3>  ° Lieu d'arrivée et de départ     </h3>
+        <input type="text" placeholder="">
+        <div> 
+        <button> Contacter le chauffeur  </button>
+        </div>
+    </div>
+</div>
+
+
+<script > 
+
+
+
+
+const employes = [
+  { pseudo: "employe1", mail: "email1@exemple.com", motDePasse: "mdp1", fonction: "Chargé de clientèle" },
+  { pseudo: "employe2", mail: "email2@exemple.com", motDePasse: "mdp2", fonction: "Technicien de maintenance" },
+  { pseudo: "employe3", mail: "email3@exemple.com", motDePasse: "mdp3", fonction: "Responsable marketing" },
+];
+
+alert("Bonjour, veuillez vous connecter !");
+
+let pseudo = prompt("Quel est votre pseudo ?");
+let mail = prompt("Quel est votre mail ?");
+let motDePasse = prompt("Quel est votre mot de passe ?");
+let fonction = prompt ("Quelle est votre fonction ?")
+
+let employeTrouve = employes.find(employe => 
+  employe.pseudo === pseudo && employe.mail === mail && employe.motDePasse === motDePasse
+);
+
+if (employeTrouve) {
+  alert("Bienvenue " + pseudo + ", vous êtes connecté en tant que " + employeTrouve.fonction + " !");
+  
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("nomEmploye").value = pseudo;
+    document.getElementById("fonctionEmploye").value = employeTrouve.fonction;
+    document.getElementById("emailEmploye").value = mail;
+  });
+
+} else {
+  alert("Accès refusé ! Vous allez être redirigé.");
+  window.location.href = "espace utilisateur.html";  
+}
+
+
+</script>
+
+</body>
+</html>
+
+

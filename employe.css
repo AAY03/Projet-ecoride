@@ -1,0 +1,120 @@
+body {
+    
+    background-color: #bfd9ce;
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    text-align: center; 
+    } 
+
+    h1 { 
+        font-size: 28px; 
+        font-weight: bold; 
+        padding: 15px; 
+        color: #2d572c; 
+    }
+ 
+    .clohe-notif {
+        width: 50px; 
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 10px;
+         font-size: 22px; 
+         color: #2d572c; 
+        } 
+
+        h3 { 
+            font-size: 18px; 
+            color: #333;
+         } 
+         
+         div { 
+            background-color: white; 
+            margin: 15px auto; 
+            padding: 15px; 
+            max-width: 90%; 
+            border-radius: 10px; 
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); } 
+            
+            img { 
+                max-width: 40px; 
+                height: auto; 
+                vertical-align: middle;
+                 margin-right: 10px; }
+                  
+                  
+                  img[alt="Photo de profil employé"] { 
+                    max-width: 100px; 
+                    border-radius: 50%; 
+                    display: block; 
+                    margin: 10px auto; 
+                } 
+                
+                button { 
+                    background-color: #2d572c; 
+                    color: white; 
+                    border: none;
+                     padding: 10px 15px; 
+                     margin: 5px; 
+                     border-radius: 5px; 
+                     cursor: pointer; 
+                     font-size: 14px; 
+                    } 
+                    
+                    @media (max-width: 768px) { 
+                        div { 
+                            max-width: 95%; 
+                        } 
+                        
+                        button { 
+                            width: 80%; 
+                        }
+                        
+                        h1 { 
+                            font-size: 24px; 
+                        }
+                        
+                        h2 { 
+                            font-size: 20px; 
+                        } 
+                        
+                        h3 { 
+                            font-size: 16px; 
+                        }
+                        
+                        img { 
+                            max-width: 30px; 
+                        } 
+                        
+                        img[alt="Photo de profil employé"] { 
+                            max-width: 80px; 
+                        } 
+                    } 
+                    
+                    @media (max-width: 500px) {
+                         h1 { 
+                            font-size: 22px; 
+                        } 
+                        
+                        h2 { 
+                            font-size: 18px; 
+                        } 
+                        
+                        h3 { 
+                            font-size: 15px; 
+                        } 
+                        
+                        button { 
+                            font-size: 12px; 
+                            padding: 8px 12px; 
+                        } 
+                        
+                        img { 
+                            max-width: 25px; 
+                        } 
+                        
+                        img[alt="Photo de profil employé"] { 
+                            max-width: 70px; 
+                        }
+                     }
