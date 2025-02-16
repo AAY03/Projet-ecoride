@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <title>Administrateur</title>
+    <link rel="stylesheet" href="Admin ecoride.css">
+</head>
+<body>
+    
+<h1> Espace Administrateur  </h1>
+
+
+
+<div>
+<h2> Administrateur  <img src="profile.png" alt="Photo de profil admin">  </h2>
+<h2>  Nom  </h2>
+
+<input type="text" placeholder="" >
+
+<div>
+    <button class="nomAdmin"> Entrer </button>
+</div>
+</div>
+<hr>
+<div>
+    <h2> Créer un compte employé  </h2>
+    <form id="créationCompte"> 
+    <h3> ° Pseudo:  </h3>
+    <input type="text" placeholder="" id="pseudo-employé" required>
+    <h3> ° Mail: </h3>
+    <input type="text" placeholder="" id="mail-employé" required>
+    <h3> ° Mot de passe: </h3>
+    <input type="text" placeholder="" id="mdp-employé" required>
+    <h3>  ° Fonction:  </h3>
+    <input type="text" placeholder="" id="fonction-employé" required>
+    <hr>
+    <button type="submit">  Valider  </button>
+    </form>
+</div>
+
+<div> 
+    <h2> Nombres de crédits gagnés par la plateforme  </h2>
+    <input type="text" placeholder="80000"> <button class="créditsGag"> Entrer  </button> 
+</div>
+
+<div>
+    <h2> Suspension des comptes   </h2>
+    <div>
+        <h3> ° Compte employé  </h3>
+        <p> - Mail     </p>
+        <input type="text" placeholder="">
+        <p>  - Justification    </p>
+        <input type="text" placeholder="">
+        <div>  
+        <button class="suspEmployé"> Valider  </button>
+        </div>
+    </div>
+    <div>
+        <h3> ° Compte  Utilisateur   </h3>
+        <p>  - Mail  </p>
+        <input type="text" placeholder="">
+        <p>   - Justification  </p>
+        <input type="text" placeholder="">
+        <div>   
+        <button class="suspUtil">  Valider   </button>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h2>  Nombre de covoiturages par jour  </h2>
+    <img src="Graph covoiturages.png" alt="Graphique de covoiturages">
+</div>
+
+<div>
+    <h2> Nombre de crédits gagnés par jour </h2>
+    <img src="Graph credits.png" alt="Graphique de crédits">
+</div>
+
+ <footer>
+    <div>
+        <p> Création de compte uniquement possible sur le site. <a href="Page accueil.html"> <button> ici </button></a> </p>
+    </div>
+ </footer>
+
+
+
+
+
+<script>
+    
+
+
+    document.addEventListener("DOMContentLoaded", function () { 
+        let form = document.getElementById("créationCompte"); 
+        console.log("Script loaded!"); 
+        if (form) { console.log("Formulaire trouvé!"); 
+        form.addEventListener("submit", function (event) { console.log("Submit event triggered!"); 
+        if (!form.checkValidity()) { 
+            event.preventDefault(); 
+            console.log("Formulaire invalid."); 
+            alert("Veuillez remplir tous les champs obligatoires."); 
+        } 
+        else { event.preventDefault(); 
+            console.log("Formulaire valid, alert."); 
+            alert("Création de compte employé reussi !"); 
+        } 
+    }); 
+} 
+else { 
+    console.error("Formulaire non trouvé! Vérifier ID du formulaire."); 
+} 
+});
+    
+        
+        
+function nomAdmin() {
+    let Nom= prompt("Quel est votre nom ?")
+    alert ("Bienvenue sur votre compte" + " " + Nom);
+  }
+ let adminEco=document.querySelector(".nomAdmin");
+ adminEco.addEventListener("click",nomAdmin)
+
+
+
+ function créditsCov() {
+    alert ("Les crédits gagnés");
+  }
+ let créditsEco=document.querySelector(".créditsGag");
+ créditsEco.addEventListener("click",créditsCov)
+
+
+
+
+
+ function employéCon() {
+    alert ("Compte employé suspendu avec succès ! ");
+  }
+ let employéEco=document.querySelector(".suspEmployé");
+ employéEco.addEventListener("click",employéCon)
+
+
+
+
+
+
+ function utilCon() {
+    alert ("Compte utilisateur suspendu avec succès");
+  }
+ let utilEco=document.querySelector(".suspUtil");
+ utilEco.addEventListener("click",utilCon)
+
+
+
+</script>
+
+</body>
+</html>
