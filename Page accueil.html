@@ -82,7 +82,7 @@
  let siteCov=document.querySelector(".site-covoiturage");
  siteCov.addEventListener("click",siteCo)
 
-
+   
   
  function siteUt() {
     alert ("Bienvenue sur la page d'utilisateur");
@@ -114,48 +114,56 @@
 
 
 
-
-
  document.addEventListener("DOMContentLoaded", function () {
     const adminForm = document.getElementById("adminForm");
 
     adminForm.addEventListener("submit", function (event) {
         event.preventDefault(); 
-
+  
+        const data = { 
+         utilisateur : document.getElementById("adminUsername").value.trim(),
+         mail : document.getElementById("adminEmail").value.trim(),
+         motdePasse : document.getElementById("adminPassword").value.trim()
+                  };
         
-        const username = document.getElementById("adminUsername").value.trim();
-        const email = document.getElementById("adminEmail").value.trim();
-        const password = document.getElementById("adminPassword").value.trim();
+        fetch("admin-login.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        }) 
 
-        
-        const validAdmins = [
-            { username: "admin1", email: "admin1@example.com", password: "passs123" },
-            { username: "admin2", email: "admin2@example.com", password: "secure356" },
-            { username: "admin3", email: "admin3@example.com", password: "private736" },
-            { username: "superadmin", email: "superadmin@example.com", password: "topsecret1" }
-        ];
+        .then(response => response.json())
+        .then(data =>  alert(data.message))     
+         .catch(() => alert("Erreur de connexion !!! "));
 
-        
-        const isAdmin = validAdmins.some(admin =>
-            admin.username === username && admin.email === email && admin.password === password
-        );
+         });
 
-        if (isAdmin) {
-            alert("Connexion réussie ! Vous serai redirigé vers la page administrateur...");
-            window.location.href = "espace administrateur.html"; 
-        } else {
-            alert("Informations incorrectes. Veuillez réessayer ou vous n'êtes pas administrateur.");
-        }
-    });
+    if (window.innerWidth <= 768) {
+        document.getElementById("admin-register").style.display = "none";
+    }
 });
 
 
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
-
-
-
-
-
 
 
 
