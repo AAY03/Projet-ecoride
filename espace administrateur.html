@@ -90,18 +90,24 @@
 
 <script>
     
+    
+
+
 
 
     document.addEventListener("DOMContentLoaded", function () { 
         let form = document.getElementById("créationCompte"); 
         console.log("Script loaded!"); 
+
         if (form) { console.log("Formulaire trouvé!"); 
         form.addEventListener("submit", function (event) { console.log("Submit event triggered!"); 
+
         if (!form.checkValidity()) { 
             event.preventDefault(); 
             console.log("Formulaire invalid."); 
             alert("Veuillez remplir tous les champs obligatoires."); 
         } 
+
         else { event.preventDefault(); 
             console.log("Formulaire valid, alert."); 
             alert("Création de compte employé reussi !"); 
@@ -150,6 +156,38 @@ function nomAdmin() {
   }
  let utilEco=document.querySelector(".suspUtil");
  utilEco.addEventListener("click",utilCon)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
