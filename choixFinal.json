@@ -1,0 +1,20 @@
+[
+    {
+        "note": "4",
+        "placesDisponibles": "1",
+        "prix": "12\u00a3",
+        "date": "22 f\u00e9vrier 2025",
+        "heureD\u00e9part": "12h23",
+        "heureArriv\u00e9e": "13h23",
+        "typeVoyage": "\u00e9cologique"
+    },
+    {
+        "note": "5",
+        "placesDisponibles": "2",
+        "prix": "14\u00a3",
+        "date": "26 f\u00e9vrier 2025",
+        "heureD\u00e9part": "15h40",
+        "heureArriv\u00e9e": "16h00",
+        "typeVoyage": "normal"
+    }
+]
