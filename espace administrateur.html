@@ -94,6 +94,68 @@
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+        alert("Bonjour, veuillez vous connecter !");
+        const admins = [
+      
+            { pseudo: "realadmin03", mail: "realadmineco@gmail.com" , motDePasse: "ecorideappbyher" },
+            { pseudo: "coadmin00", mail: "coadmineco.com", motDePasse: "ecoride@myproject" }
+        ];
+
+
+        
+
+
+    
+    let pseudo = prompt("Quel est votre nom d'utilisateur  ?");
+let mail = prompt("Quel est votre mail ?");
+let motDePasse = prompt("Quel est votre mot de passe ?");
+
+let adminTrouve = admins.find(admin => 
+  admin.pseudo === pseudo && admin.mail === mail && admin.motDePasse === motDePasse
+ );
+
+  if (adminTrouve) {
+  alert("Bienvenue " + pseudo + ", vous êtes connecté !");
+  
+  let nomAdminInput = document.querySelector(".nomAdmin");
+            if (nomAdminInput) nomAdminInput.textContent = pseudo;
+
+        } else {
+            alert("Accès refusé ! Vous allez être redirigé.");
+            window.location.href = "espace utilisateur.html";  
+        }
+    });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 
         
 function nomAdmin() {
