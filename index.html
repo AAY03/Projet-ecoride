@@ -20,7 +20,7 @@
 </div>
 <div class="menu-accueil">
     <hr>
-<a href="index.html">  <button> Accueil   </button> </a>
+<a href="Page accueil.html">  <button> Accueil   </button> </a>
   <a href="espace covoiturage.html" > <button class="site-covoiturage"> Covoiturages   </button> </a>
 <a href="espace utilisateur.html"> <button class="site-utilisateur"> Connexion  </button> </a>
   <a href="#mail">    <button class="mail-ecoride"> Contact </button> </a>
@@ -58,7 +58,7 @@
   <div id="admin-register"> 
     <h2>Créer un compte administrateur </h2> 
     <form id="adminForm"> 
-      <label for="adminUsername"> Nom d'utilisateur : </label> 
+      <label for="adminUsername"> Nom utilisateur : </label> 
       <input type="text" id="adminUsername" name="adminUsername" required> 
       <label for="adminEmail"> Email :</label> 
       <input type="email" id="adminEmail" name="adminEmail" required> 
@@ -107,56 +107,38 @@
 
 
 
+ 
+  document.getElementById("adminForm").addEventListener("submit", function (event) {
+    event.preventDefault(); 
 
-
-
-
-
-
-
- document.addEventListener("DOMContentLoaded", function () {
-    const adminForm = document.getElementById("adminForm");
-
-    adminForm.addEventListener("submit", function (event) {
-        event.preventDefault(); 
-  
-        const data = { 
-         utilisateur : document.getElementById("adminUsername").value.trim(),
-         mail : document.getElementById("adminEmail").value.trim(),
-         motdePasse : document.getElementById("adminPassword").value.trim()
-                  };
-        
-        fetch("admin-login.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        }) 
-
-        .then(response => response.json())
-        .then(data =>  alert(data.message))     
-         .catch(() => alert("Erreur de connexion !!! "));
-
-         });
-
-    if (window.innerWidth <= 768) {
-        document.getElementById("admin-register").style.display = "none";
+    
+    if (window.innerWidth < 768) {
+      alert("Connexion administrateur disponible uniquement sur ordinateur.");
+      return;
     }
-});
 
+    const admins = [
+      { username: "realadmin03", email: "realadmineco@gmail.com", password: "ecorideappbyher" },
+      { username: "coadmin00", email: "coadmineco@gmail.com", password: "ecoride@myproject" }
+    ];
 
-      
+    const inputUsername = document.getElementById("adminUsername").value;
+    const inputEmail = document.getElementById("adminEmail").value;
+    const inputPassword = document.getElementById("adminPassword").value;
 
+    const isAdmin = admins.some(admin =>
+      admin.username === inputUsername &&
+      admin.email === inputEmail &&
+      admin.password === inputPassword
+    );
 
-
-
-
-
-
-
-
-
-
-
+    if (isAdmin) {
+      alert("Connexion réussie !");
+      window.location.href = "espace administrateur.html"; 
+    } else {
+      alert("Accès refusé. Seuls les administrateurs peuvent se connecter.");
+    }
+  });
 
 
 
